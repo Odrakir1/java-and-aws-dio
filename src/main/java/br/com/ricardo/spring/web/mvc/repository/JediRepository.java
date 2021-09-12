@@ -42,4 +42,12 @@ public class JediRepository {
 		
 		throw new JediNotFoundException();
 	}
+	
+	public void deleteJedi(Long id) {
+		this.jedi.removeIf(jedi -> jedi.getId() == id);
+	}
 }
+
+
+
+
