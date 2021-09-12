@@ -22,7 +22,7 @@ public class JediRepository {
 		return this.jedi;
 	}
 
-	public void add(final Jedi jedi) {
+	public Jedi add(final Jedi jedi) {
 		//though it isn't a good practice
 		//we're just simulating an in-memory DB
 		
@@ -30,13 +30,15 @@ public class JediRepository {
 		//get duplicated in controller and in REST
 		jedi.setId(this.jedi.size());
 		this.jedi.add(jedi);
+		
+		return jedi;
 	}
 	
-	public Jedi getJedi(Long id){
+	public Optional<Jedi> getJedi(Long id){
 		Optional<Jedi> jedi = this.jedi.stream().filter(j -> j.getId() == id).findFirst();
 		
 		if(jedi.isPresent())
-			return jedi.get();
+			return jedi;
 		
 		throw new JediNotFoundException();
 	}
