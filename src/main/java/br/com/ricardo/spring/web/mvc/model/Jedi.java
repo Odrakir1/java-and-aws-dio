@@ -10,6 +10,16 @@ public class Jedi {
 	@NotBlank
 	private String lastName;
 
+	private int id;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	public Jedi(final String name,final String lastName) {
 		this.name = name;
 		this.lastName = lastName;
