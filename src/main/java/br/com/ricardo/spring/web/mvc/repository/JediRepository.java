@@ -46,6 +46,13 @@ public class JediRepository {
 	public void deleteJedi(Long id) {
 		this.jedi.removeIf(jedi -> jedi.getId() == id);
 	}
+	
+	public Jedi saveJedi(Jedi jedi, Long id) {
+		this.deleteJedi(id);
+		this.jedi.add(jedi);
+		
+		return jedi;
+	}
 }
 
 
