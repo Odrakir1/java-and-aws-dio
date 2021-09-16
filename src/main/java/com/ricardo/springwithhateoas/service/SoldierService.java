@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 import org.springframework.stereotype.Service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.ricardo.springwithhateoas.controller.response.SoldierResponse;
 import com.ricardo.springwithhateoas.dto.Soldier;
 import com.ricardo.springwithhateoas.entity.SoldierEntity;
 import com.ricardo.springwithhateoas.repository.SoldierRepository;
