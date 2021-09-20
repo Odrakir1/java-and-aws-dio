@@ -1,8 +1,10 @@
 package com.ricardo.springwithhateoas.controller.response;
 
+import org.springframework.hateoas.RepresentationModel;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class SoldierResponse {
+public class SoldierResponse extends RepresentationModel {
     private Long id;
     private String cpf;
     private String name;
