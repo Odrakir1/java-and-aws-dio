@@ -1,7 +1,5 @@
 package com.ricardo.springwithhateoas.controller;
 
-import java.util.List;
-
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
